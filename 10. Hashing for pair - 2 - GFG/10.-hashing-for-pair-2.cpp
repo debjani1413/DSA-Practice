@@ -14,25 +14,19 @@ int sumExists(int arr[], int sizeOfArray, int sum);
 // sum.
 int sumExists(int arr[], int N, int sum) {
     // Your code here
-    map<int,int> s;
+    set<int> s;
     for(int i=0;i<N;i++)
-    s[arr[i]]++;
-    map<int,int> :: iterator itr;
+    s.insert(arr[i]);
+    set<int> :: iterator itr;
     int v;
     for(itr=s.begin();itr!=s.end();itr++)
     {
-        if(sum>itr->first)
-        v=sum-itr->first;
+        if(sum>*(itr))
+        v=sum-*(itr);
         else
         continue;
-        if(s.find(v)!=s.end())
-        {
-            if(v==itr->first && itr->second>1)
-            return 1;
-            else if(v==itr->first && itr->second==1)
-            return 0;
+        if(s.find(v)!=s.end() && s.find(v)!=itr)
         return 1;
-        }
     }
     return 0;
 }
