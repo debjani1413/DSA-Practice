@@ -39,7 +39,7 @@ class Solution{
     //Function to insert a node at the beginning of the linked list.
     Node *insertAtBegining(Node *head, int x) {
        // Your code here
-        Node * new_node = new Node(x);
+      Node * new_node = new Node(x);
       if(head==NULL)
       {
           head=new_node;
@@ -58,38 +58,22 @@ class Solution{
     //Function to insert a node at the end of the linked list.
     Node *insertAtEnd(Node *head, int x)  {
        // Your code here
-    //   Node* new_node = new Node(x);
-    //   new_node->next=NULL;
-    //   if(head==NULL)
-    //   {
-    //   head=new_node;
-    //   }
-    //   Node * last=head;
-    //   while(last->next!=NULL)
-    //   {
-    //       last=last->next;
-    //   }
-    //   last->next=new_node;
-    //   return head;
-    Node * nw = new Node(x);
-       if(head == NULL)
-       {
-           head = nw;
-           head -> next = NULL;
-       }
-       else
-       {
-           Node * ptr = head;
-           while(ptr -> next != NULL)
-           {
-               ptr = ptr -> next;
-           }
-           
-           ptr -> next = nw;
-           nw -> next = NULL;
-       }
-       return head;
-
+      Node* new_node = new Node(x);
+      new_node->next=NULL;
+      if(head==NULL)
+      {
+      head=new_node;
+      head->next=NULL;
+      }
+      else{
+      Node * last=head;
+      while(last->next!=NULL)
+      {
+          last=last->next;
+      }
+      last->next=new_node;
+      }
+      return head;
 
     }
 };
