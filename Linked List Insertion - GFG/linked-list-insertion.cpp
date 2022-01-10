@@ -39,30 +39,18 @@ class Solution{
     //Function to insert a node at the beginning of the linked list.
     Node *insertAtBegining(Node *head, int x) {
        // Your code here
-    //     Node * new_node = new Node(x);
-    //   if(head==NULL)
-    //   {
-    //       head=new_node;
-    //       head->next=NULL;
-    //   }
-    //   else
-    //   {
-    //   new_node->next= head;
-    //   head=new_node;
-    //   }
-    //   return head;
-    Node * nw = new Node(x);
-        if(head == NULL)
-        {
-            head = nw;
-            head -> next = NULL;
-        }
-        else
-        {
-            nw -> next = head;
-            head = nw;
-        }
-        return head;
+        Node * new_node = new Node(x);
+      if(head==NULL)
+      {
+          head=new_node;
+          head->next=NULL;
+      }
+      else
+      {
+      new_node->next= head;
+      head=new_node;
+      }
+      return head;
     
     }
     
