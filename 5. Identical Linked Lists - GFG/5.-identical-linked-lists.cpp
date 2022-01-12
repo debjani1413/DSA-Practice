@@ -69,26 +69,14 @@ bool areIdentical(struct Node *head1, struct Node *head2)
     // Code here
     Node *temp1=head1;
 	Node *temp2=head2;
-	int c=0,d=0;
 	if(head1==NULL || head2==NULL)
 	return false;
 	while(temp1!=NULL && temp2!=NULL)
 	{
-	    d++;
-        temp1=temp1->next;
-	    temp2=temp2->next;
-	}
-	temp1=head1;
-	temp2=head2;
-	while(temp1!=NULL && temp2!=NULL)
-	{
-	    if(temp1->data==temp2->data)
-	    c++;
+	    if(temp1->data!=temp2->data)
+	    return false;
 	    temp1=temp1->next;
 	    temp2=temp2->next;
 	}
-	if(c==d)
 	return true;
-	else
-	return false;
 }
