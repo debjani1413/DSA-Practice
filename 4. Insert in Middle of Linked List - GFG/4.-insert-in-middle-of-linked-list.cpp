@@ -67,6 +67,8 @@ struct Node {
 Node* insertInMiddle(Node* head, int x)
 {
 	// Code here
+	if(head==NULL)
+	return NULL;
 	Node* new_node = new Node(x);
     Node* temp = head;
     int c=0;
