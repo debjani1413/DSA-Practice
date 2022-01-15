@@ -9,7 +9,7 @@ public:
                                    { 'D' , 500 },
                                    { 'M' , 1000 } };
                                    
-   int ans = mp[s.back()];
+   int ans = mp[s[s.length()-1]];
    for (int i = s.length() - 2; i >= 0; --i) 
    {
        if (mp[s[i]] < mp[s[i + 1]])
