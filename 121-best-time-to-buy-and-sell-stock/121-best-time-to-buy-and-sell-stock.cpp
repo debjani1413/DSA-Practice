@@ -10,12 +10,6 @@ public:
                 min=prices[i];
                 j=i;
                 max=prices[i];
-            // while(j!=prices.size())
-            // {
-            //     if(prices[j]>max)
-            //         max=prices[j];
-            //     j++;
-            // }
             }
             else
                 max=prices[i];
