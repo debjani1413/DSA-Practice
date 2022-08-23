@@ -12,7 +12,7 @@ public:
                     //+1 because indices are NOT zero based
 			result.push_back(hash[numberToFind]);
 			result.push_back(i);			
-			return result;
+			
 		}
 
             //number was not found. Put it in the map.
